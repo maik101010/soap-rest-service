@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="http://techprimers.com/spring-boot-soap-example">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:getPersonRequest>
+            <us:names>michael</us:names>
+            <us:lastNames>garcia</us:lastNames>
+            <us:document>cc</us:document>
+            <us:numberDocument>a123123</us:numberDocument>
+            <us:birthDate>1996-02-02</us:birthDate>
+            <us:bonding>2000-05-06</us:bonding>
+            <us:function>trabajar</us:function>
+            <us:salary>50000</us:salary>
+        </us:getPersonRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://techprimers.com/spring-boot-soap-example"
+           targetNamespace="http://techprimers.com/spring-boot-soap-example"
+           elementFormDefault="qualified">
+
+    <xs:element name="getPersonRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="person" type="tns:person" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPersonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="person" type="tns:person" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="person">
+        <xs:sequence>
+            <xs:element name="names" type="xs:string" />
+            <xs:element name="lastNames" type="xs:string" />
+            <xs:element name="document" type="xs:string" />
+            <xs:element name="numberDocument" type="xs:string" />
+            <xs:element name="birthDate" type="xs:string" />
+            <xs:element name="bonding" type="xs:string" />
+            <xs:element name="function" type="xs:string" />
+            <xs:element name="salary" type="xs:double" />
+            <xs:element name="age" type="xs:date" />
+            <xs:element name="timeBounding" type="xs:date" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
