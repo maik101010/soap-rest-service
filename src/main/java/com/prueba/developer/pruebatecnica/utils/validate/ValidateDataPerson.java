@@ -20,7 +20,8 @@ import java.util.GregorianCalendar;
 
 @Component
 public class ValidateDataPerson {
-    final static String DATE_FORMAT = "yyyy-MM-dd";
+    private final static String DATE_FORMAT = "yyyy-MM-dd";
+    private final static int AGE = 18;
     Logger logger = LoggerFactory.getLogger(ValidateDataPerson.class);
 
     public boolean validateData(PersonDto personDto) {
@@ -40,7 +41,7 @@ public class ValidateDataPerson {
 
     private boolean validateAge(String birthDate) {
         Period period = getDateWithParameters(birthDate);
-        if (period.getYears() < 18) {
+        if (period.getYears() < AGE) {
             throw new BadRequestException("Bad age");
         }
         return true;

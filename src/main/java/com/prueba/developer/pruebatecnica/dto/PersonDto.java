@@ -1,7 +1,6 @@
 package com.prueba.developer.pruebatecnica.dto;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class PersonDto implements Serializable {
     private static final long serialVersionUID = -7868921555530898L;
