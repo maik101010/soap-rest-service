@@ -1,6 +1,7 @@
 package com.prueba.developer.pruebatecnica.controller;
 
 import com.prueba.developer.pruebatecnica.dto.PersonDto;
+import com.prueba.developer.pruebatecnica.entity.PersonEntity;
 import com.prueba.developer.pruebatecnica.service.PersonService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/person")
@@ -20,6 +22,12 @@ public class PersonController {
 
     public PersonController(PersonService personService) {
         this.personService = personService;
+    }
+
+
+    @GetMapping("/{salary}")
+    public List<PersonEntity> list(@PathVariable double salary) {
+        return personService.getListSalary(salary);
     }
 
     @GetMapping
